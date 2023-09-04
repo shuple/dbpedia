@@ -13,7 +13,7 @@ If you prefer a command line, there is a Python CLI companion for effortless SPA
 
 ```bash
 git clone https://github.com/shuple/sparqly
-python3 sparqly/sparql_query.py query-dbpedia/sample/object.sparql
+python3 sparqly/sparql_query.py query-dbpedia/sparql/object.sparql
 ```
 
 ## Changelog
