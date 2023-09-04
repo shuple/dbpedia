@@ -1,0 +1,8 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?propertyLabel ?value
+WHERE {
+  dbr:The_Offspring ?property ?value .
+  ?property rdfs:label ?propertyLabel
+}

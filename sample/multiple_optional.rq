@@ -1,0 +1,12 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?title ?album ?released
+WHERE {
+  ?title dbo:artist dbr:The_Offspring .
+  OPTIONAL { ?title dbp:album ?album } .
+  OPTIONAL { ?album dbp:released ?released }
+}

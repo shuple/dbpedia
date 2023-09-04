@@ -1,0 +1,7 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?s
+WHERE {
+  ?s dbo:bandMember <http://dbpedia.org/resource/Dexter_Holland>
+}

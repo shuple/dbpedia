@@ -1,0 +1,10 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandMember ?label
+WHERE {
+  dbr:The_Offspring dbo:bandMember ?bandMember ;
+  rdfs:label ?label FILTER(lang(?label) = 'en')
+# FILTER(lang(?label) = 'en')
+# FILTER(langMatches(lang(?label), 'en'))
+}

@@ -1,0 +1,10 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?title ?album
+WHERE {
+  # property path: zero or more path
+  dbr:I_Choose dbo:previousWork* ?title .
+  ?title dbp:artist dbr:The_Offspring .
+  OPTIONAL { ?title dbp:album ?album }
+}
