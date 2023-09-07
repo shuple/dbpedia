@@ -1,0 +1,6 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT DISTINCT ?p
+WHERE {
+  dbr:The_Offspring ?p ?o
+}
