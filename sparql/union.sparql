@@ -1,0 +1,17 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?formerBandMember ?genre
+WHERE {
+  {
+    dbr:The_Offspring dbo:formerBandMember ?formerBandMember .
+    ?formerBandMember dbo:genre dbr:Skate_punk ;
+                      dbo:genre ?genre
+  }
+  UNION
+  {
+    dbr:The_Offspring dbo:formerBandMember ?formerBandMember .
+    ?formerBandMember dbo:genre dbr:Metalcore ;
+                      dbo:genre ?genre
+  }
+}
