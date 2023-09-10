@@ -5,7 +5,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?title ?album
 WHERE {
-  # property path: sequence path
+  # sequence path
   dbr:Original_Prankster dbo:previousWork/dbo:previousWork/dbo:previousWork ?title .
   OPTIONAL { ?title dbp:album ?album }
 }

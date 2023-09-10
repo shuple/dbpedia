@@ -7,6 +7,6 @@ SELECT ?bandMember ?name
 WHERE {
   dbr:The_Offspring dbo:bandMember ?bandMember .
   ?bandMember rdf:type foaf:Person .
-  # property path: alternative path
+  # alternative path
   ?bandMember (foaf:name | foaf:givenName) ?name
 }

@@ -5,7 +5,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?album
 WHERE {
-  # property path: inverse property path
+  # inverse property path
   ?album ^dbo:album dbr:Original_Prankster
 # dbr:Original_Prankster dbo:album ?album
 }

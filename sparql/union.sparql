@@ -1,6 +1,8 @@
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 
+# Combines results from different patterns.
+# If an item matches any of the patterns, it's included in the output along with all the information associated with it.
 SELECT ?formerBandMember ?genre
 WHERE {
   {

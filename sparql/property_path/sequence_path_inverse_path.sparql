@@ -5,7 +5,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT DISTINCT ?intermediate
 WHERE {
-  # property path: sequence path
+  # sequence path inverse path
   # find common dbp:title between ?intermediate and dbr:The_Offspring_Collection
   ?intermediate dbp:title/^dbp:title dbr:The_Offspring_Collection .
 # dbr:The_Offspring_Collection dbp:title ?title .
