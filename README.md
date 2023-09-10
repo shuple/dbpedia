@@ -8,13 +8,18 @@ git clone https://github.com/shuple/query-dbpedia
 ```
 
 ## Usage
-Copy and paste the query on the sample directory on https://dbpedia.org/sparql.
+Copy and paste the query in <a href="https://github.com/shuple/query-dbpedia/tree/master/sparql">sample</a>/ to https://dbpedia.org/sparql.
 If you prefer a command line, there is a Python CLI companion for effortless SPARQL endpoint and RDF file interactions.
 
 ```bash
 git clone https://github.com/shuple/sparqly
-python3 sparqly/sparql_query.py query-dbpedia/sparql/object.sparql
+python3 sparqly/sparqly_query.py query-dbpedia/sparql/object.sparql
 ```
+<pre>
+------------------------
+ dbr:Noodles_(musician)
+ dbr:Dexter_Holland
+</pre>
 
 ## Changelog
 ##### 0.1a (2023-09-04)
