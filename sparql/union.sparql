@@ -5,15 +5,11 @@ PREFIX dbo: <http://dbpedia.org/ontology/>
 # If an item matches any of the patterns, it's included in the output along with all the information associated with it.
 SELECT ?formerBandMember ?genre
 WHERE {
-  {
-    dbr:The_Offspring dbo:formerBandMember ?formerBandMember .
-    ?formerBandMember dbo:genre dbr:Skate_punk ;
-                      dbo:genre ?genre
-  }
+  dbr:The_Offspring dbo:formerBandMember ?formerBandMember ;
+                    dbo:genre ?genre .
+  # The format for UNION requires each pattern to be enclosed in braces {...}.
+  # Hence there are braces around each pattern.
+  { ?formerBandMember dbo:genre dbr:Skate_punk }
   UNION
-  {
-    dbr:The_Offspring dbo:formerBandMember ?formerBandMember .
-    ?formerBandMember dbo:genre dbr:Metalcore ;
-                      dbo:genre ?genre
-  }
+  { ?formerBandMember dbo:genre dbr:Metalcore  }
 }
