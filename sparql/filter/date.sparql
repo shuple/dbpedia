@@ -1,0 +1,13 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?givenName ?birthDate
+WHERE {
+  dbr:The_Offspring dbo:bandMember ?bandMember .
+  ?bandMember rdf:type foaf:Person ;
+              foaf:givenName ?givenName ;
+              dbo:birthDate ?birthDate
+  FILTER (?birthDate < '1965-01-01'^^xsd:date)
+}
