@@ -1,0 +1,9 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandMember ?genre
+WHERE {
+  dbr:The_Offspring dbo:formerBandMember ?bandMember .
+  ?bandMember dbo:genre ?genre
+  FILTER (?genre IN (dbr:Punk_rock, dbr:Skate_punk))
+}
