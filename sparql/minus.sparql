@@ -1,13 +1,10 @@
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-SELECT ?bandMember ?givenName
+SELECT ?bandMember ?genre
 WHERE {
-  dbr:The_Offspring dbo:bandMember ?bandMember .
-  ?bandMember rdf:type foaf:Person ;
-              foaf:givenName ?givenName .
-  # SPARQL 1.1
-  MINUS { ?bandMember foaf:name ?name }
+  dbr:The_Offspring dbo:formerBandMember ?bandMember .
+  ?bandMember dbo:genre ?genre .
+  # removes ?bandMember
+  MINUS { ?bandMember dbo:genre dbr:Skate_punk }
 }
