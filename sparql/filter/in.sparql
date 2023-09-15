@@ -6,4 +6,6 @@ WHERE {
   dbr:The_Offspring dbo:formerBandMember ?bandMember .
   ?bandMember dbo:genre ?genre
   FILTER (?genre IN (dbr:Punk_rock, dbr:Skate_punk))
+  # inverse
+  # FILTER (?genre NOT IN (dbr:Punk_rock, dbr:Skate_punk))
 }
