@@ -1,7 +1,8 @@
 PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 
-SELECT ?album datatype(?album)
+# The endpoint must support AS
+SELECT ?album (datatype(?album) AS ?albumDataType)
 WHERE {
   ?album dbo:artist dbr:The_Offspring
 } LIMIT 10
