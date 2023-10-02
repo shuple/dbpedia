@@ -7,5 +7,8 @@ SELECT ?title ?album
 WHERE {
   # sequence path
   dbr:Original_Prankster dbo:previousWork/dbo:previousWork/dbo:previousWork ?title .
+  # same as
+  # dbr:Original_Prankster dbo:previousWork ?previousWork .
+  # ?previousWork  dbo:previousWork ?title .
   OPTIONAL { ?title dbp:album ?album }
 }
