@@ -1,0 +1,10 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT <http://dbpedia.org> ?bandMember
+FROM NAMED <http://dbpedia.org>
+WHERE {
+  GRAPH <http://dbpedia.org> {
+    dbr:The_Offspring dbo:bandMember ?bandMember.
+  }
+}
