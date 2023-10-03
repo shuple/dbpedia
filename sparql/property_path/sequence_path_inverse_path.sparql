@@ -8,8 +8,9 @@ WHERE {
   # sequence path inverse path
   # find common dbp:title between ?intermediate and dbr:The_Offspring_Collection
   ?intermediate dbp:title/^dbp:title dbr:The_Offspring_Collection .
-# dbr:The_Offspring_Collection dbp:title ?title .
-# ?title ^dbp:title ?intermediate .
+  # same as
+  # dbr:The_Offspring_Collection dbp:title ?title .
+  # ?title ^dbp:title ?intermediate .
   ?intermediate dbp:album ?album
 }
 
