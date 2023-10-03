@@ -1,0 +1,9 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?album ?released
+WHERE {
+  VALUES (?album ?released) {
+    (dbr:Virtual_Album '2023-10-03'^^xsd:date)
+  }
+}
