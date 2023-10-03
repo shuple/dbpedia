@@ -4,7 +4,7 @@ PREFIX dbp: <http://dbpedia.org/property/>
 
 SELECT ?album ?released datatype(?released)
 WHERE {
-  ?album dbo:artist dbr:The_Offspring .
+  ?album dbp:artist dbr:The_Offspring .
   ?album dbp:released ?released . 
   FILTER (datatype(?released) = <http://www.w3.org/2001/XMLSchema#date>) .
   # OFFSET 3 skips the first 3 entries

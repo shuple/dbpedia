@@ -4,5 +4,5 @@ PREFIX dbo: <http://dbpedia.org/ontology/>
 # The endpoint must support AS
 SELECT ?album (datatype(?album) AS ?albumDataType)
 WHERE {
-  ?album dbo:artist dbr:The_Offspring
+  ?album dbp:artist dbr:The_Offspring
 } LIMIT 10
