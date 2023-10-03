@@ -1,0 +1,13 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?artist ?album
+WHERE {
+  VALUES (?album ?artist) {
+    (<http://dbpedia.org/resource/Americana_(The_Offspring_album)> dbr:The_Offspring)
+    (<http://dbpedia.org/resource/Splinter_(The_Offspring_album)> dbr:The_Offspring)
+  }
+  ?album dbp:artist ?artist ;
+         dbp:released ?released
+}
