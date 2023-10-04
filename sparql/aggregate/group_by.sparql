@@ -1,0 +1,10 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbd: <http://dbpedia.org/datatype/>
+
+SELECT ?title (MAX(?duration) AS ?aggregateDuration)
+WHERE {
+  ?title dbp:artist dbr:The_Offspring ;
+         dbp:length ?duration
+  FILTER(datatype(?duration) = dbd:second)
+} GROUP BY ?title
