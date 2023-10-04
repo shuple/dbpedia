@@ -4,6 +4,7 @@ PREFIX dbp: <http://dbpedia.org/property/>
 
 SELECT ?artist ?album
 WHERE {
+  # uses logical OR, logical AND is not possible with VALUES
   VALUES (?album ?artist) {
     (<http://dbpedia.org/resource/Americana_(The_Offspring_album)> dbr:The_Offspring)
     (<http://dbpedia.org/resource/Splinter_(The_Offspring_album)> dbr:The_Offspring)
