@@ -1,0 +1,19 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?album ?latestRelease
+WHERE {
+  {
+    SELECT (MAX(?released) AS ?latestRelease)
+    WHERE {
+      ?album dbp:artist dbr:The_Offspring .
+      ?album dbp:released ?released . 
+      FILTER (datatype(?released) = <http://www.w3.org/2001/XMLSchema#date>) .
+    }
+  }
+  {
+    ?album dbp:artist dbr:The_Offspring ;
+           dbp:released ?latestRelease . 
+  }
+}
