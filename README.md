@@ -8,7 +8,7 @@ git clone https://github.com/shuple/query-dbpedia
 ```
 
 ## Usage
-Copy and paste the query in <a href="https://github.com/shuple/query-dbpedia/tree/master/sparql">sample</a> to https://dbpedia.org/sparql.
+Copy and paste the query in <a href="https://github.com/shuple/query-dbpedia/tree/master/sparql">sample</a> to https://dbpedia.org/snorql.
 If you prefer a command line, there is a Python CLI companion, <a href="https://github.com/shuple/sparqly">sparqly</a>, for effortless SPARQL endpoint and RDF file interactions.
 
 ```bash
