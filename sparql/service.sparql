@@ -1,0 +1,11 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandMember
+WHERE {
+  {
+    SERVICE <https://dbpedia.org/sparql> {
+      dbr:The_Offspring dbo:bandMember ?bandMember
+    }
+  }
+}
