@@ -1,0 +1,29 @@
+# federated query is supported in Apache Jena ARQ,
+# while it is not supported in SPARQLWrapper or rdflib
+
+# dbpedia
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+# wiki
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdp: <http://www.wikidata.org/property/>
+
+# rdf schema
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?dbpediaLabel ?wikiLabel
+WHERE {
+  {
+    SERVICE <https://dbpedia.org/sparql> {
+      dbr:The_Offspring rdfs:label ?dbpediaLabel
+      FILTER(lang(?dbpediaLabel) = 'en')
+    }
+  }
+  {
+    SERVICE <https://query.wikidata.org/sparql> {
+      wd:Q157041 rdfs:label ?wikiLabel.
+      FILTER(lang(?wikiLabel) = 'en')
+    }
+  }
+}
